@@ -1,0 +1,20 @@
+{
+    "name": "oracle-servicebus-cors",
+    "version": "0.1.0",
+	"author": "CS",
+	"main": "osb-cros.js",
+    "description": "Proxy enabling CORS for OSB - by Carlos Santos",
+    "license": "ISC",
+    "repository": "jtiagodev/oracle-servicebus-cors",
+    "keywords": [
+      "oracle service bus",
+      "osb",
+      "oracle",
+      "proxy"
+    ],
+	  "dependencies": {
+    "dotenv": "^6.1.0",
+    "http": "0.0.0"
+	}
+  }
+  
