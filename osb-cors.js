@@ -63,6 +63,7 @@ http.createServer(function (request, response) {
 		});
 		response.setHeader('Access-Control-Allow-Origin', '*');
 		response.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+		response.setHeader('Access-Control-Allow-Methods', '*'); 
 	}
 
 	var req = http.request(options, callback);
