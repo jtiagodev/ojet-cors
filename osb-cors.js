@@ -53,16 +53,18 @@ http.createServer(function (request, response) {
 	};
 
 	callback = function (proxyResponse) {
-		proxyResponse.on('data', function (chunk) {
-			response.write(chunk);
-			// serviceResponse
-		});
+
+			proxyResponse.on('data', function (chunk) {
+				response.write(chunk);
+				// serviceResponse
+			});
+
 		proxyResponse.on('end', function () {
 			response.end();
 			// serviceResponse
 		});
 		response.setHeader('Access-Control-Allow-Origin', '*');
-		response.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+		response.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Allow-Methods, crossDomain');
 		response.setHeader('Access-Control-Allow-Methods', '*'); 
 	}
 
